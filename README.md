@@ -1,3 +1,3 @@
 A Coffee shop application created using html in Netbeans 8.2
-Dtabase Connection tHrough wamp server 
+Database Connection through wamp server 
 Applying design patterns 
