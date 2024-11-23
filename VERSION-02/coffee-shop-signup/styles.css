@@ -1,0 +1,272 @@
+
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif; /* Default font */
+}
+
+/* Body Styling */
+body {
+    background-color: #f7f3e9;
+    overflow-x: hidden;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(113, 49, 7, 0.8); /* Slightly transparent */
+    padding: 10px 20px;
+    height: 80px;
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%; /* Full width */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it's above other content */
+}
+.coffee-shop-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.coffee-shop-logo img {
+    height: 60px; /* Adjust the height as needed */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: #b2744c;
+    border: 1px solid #fff; /* White border around the links */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #de9e73;
+    color: black;
+    border-color: #de9e73; /* Change border color on hover */
+}
+footer {
+    background-color: rgba(113, 49, 7, 0.8); /* Slightly transparent */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it's above other content */
+}
+/* Home Section */
+#home {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; /* Align content to the left */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url(./images/bc4.jpg); /* Set your background image here */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-position: center; /* Center the background image */
+    position: relative;
+    padding-top: 80px; 
+}
+
+/* Content within the Home Section */
+.content {
+    color: white; /* Make text color white for better visibility */
+    max-width: 600px; /* Set max-width for better alignment */
+    text-align: left; /* Align text to the left */
+    z-index: 1; /* Ensure content is above the background */
+    position: relative; /* For z-index to take effect */
+    padding: 20px; /* Add some padding */
+    margin-left: 20px;
+}
+
+/* Ensure text visibility on background */
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 10px; /* Add space below heading */
+}
+
+.content p {
+    margin-bottom: 20px; /* Add space below paragraph */
+}
+
+/* Button styling */
+#btn {
+    width: 150px;
+    height: 36px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background: #b2744c;
+    color: white;
+}
+
+/* Sign-Up and Sign-In Page Specific Styles */
+body.signin-page, body.signup-page {
+    display: flex; /* Flexbox on these pages only */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    padding-top: 80px; /* Prevent content from being hidden by the navbar */
+}
+
+.signup-container, .signin-container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 10px auto; /* Add margin to separate the containers */
+    position: relative; /* For z-index */
+    z-index: 2; /* Ensure it's above the background */
+}
+
+
+/* Flex Container for Centering */
+.container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100%; /* Full height */
+    flex-direction: column; /* Stack the sign-in and sign-up containers vertically */
+}
+/* Form Header Styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6b4f4f; /* Match with your homepage colors */
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:invalid {
+    border-color: #e74c3c;
+}
+
+input:valid {
+    border-color: #2ecc71;
+}
+
+small {
+    color: #e74c3c;
+    font-size: 12px;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #713107; /* Match with your homepage colors */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b2744c; /* Darker shade for hover */
+}
+
+/* Error message */
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+}
+
+/* Sign-in and sign-up page options */
+.options {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.options a {
+    color: #713107; /* Match with your homepage colors */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.options span {
+    color: #713107; /* Match with your homepage colors */
+    font-size: 14px;
+}
+
+/* Image Container (if you decide to use it) */
+.image-container {
+    display: none; /* Hides the separate image if you are using a background */
+}
+
+.image-container img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add some border radius for better styling */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack content and image vertically on smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .content {
+        padding: 20px; /* Reduce padding on smaller screens */
+        text-align: left; /* Keep text left-aligned */
+        margin-left: 20px; /* Adjust left margin for smaller screens */
+    }
+
+    .container {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center content horizontally */
+        align-items: flex-start; /* Align items to the start vertically */
+        height: calc(100vh - 80px); /* Full viewport height minus navbar height */
+        margin-top: 80px; /* Add margin-top to position below the navbar */
+    }
+}
