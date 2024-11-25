@@ -1,0 +1,461 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+/* Common Section Style for All Pages */
+
+   .page-section {
+    margin-top: 80px;
+    padding-left: 80px;
+}
+/* Home Page Specific Background */
+body.home-page {
+    background-image: url('./images/bc4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Remove Background Image from Other Pages */
+body:not(.home-page) {
+    background-image: none; /* No background image on other pages */
+    background-color: #f7f3e9; /* Fallback color */
+}
+
+/* --- Navbar Styles (General) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(113, 49, 7, 0.8);
+    padding: 10px 20px;
+    height: 80px; /* Fixed height for navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Ensures the navbar stays above other content */
+}
+
+.coffee-shop-logo img {
+    height: 60px; 
+}
+
+.coffee-shop-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Links - Styled to Match Search Button */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: #b2744c;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #de9e73;
+    color: black;
+    border-color: #713107;
+}
+
+/* --- Search Box Styling (Home Page) --- */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #b2744c;
+    border-radius: 5px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+/* Focus effect with box shadow for a more modern look */
+.srch:focus {
+    border-color: #de9e73; /* Changes border color when focused */
+    box-shadow: 0 0 5px rgba(222, 158, 115, 0.8); /* Subtle shadow on focus */
+}
+
+.btn {
+   padding: 10px 15px;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #de9e73;
+    border-color: #de9e73;
+    color: #fff;
+    transform: scale(1.05); /* Slightly scales the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.btn:active {
+    transform: scale(1.03);
+}
+
+/* --- Home Section --- */
+
+#home {
+display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    width: 100%;
+    height: calc(100vh - 80px); /* Adjusted for navbar */
+    background-image: url('./images/bc4.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure it covers the section */
+    background-position: center centre; /* Center the background image */
+    position: relative;
+    padding-left: 80px; 
+}
+
+/* Welcome Content Styling */
+.content {
+    color: #f7f3e9;
+    max-width: 600px;
+    text-align: left;
+    z-index: 1; /* Ensures content is above the background */
+    padding: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Main Heading Styling */
+.content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffedd5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth */
+    letter-spacing: 1.5px;
+}
+
+/* Paragraph Styling */
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #f7f3e9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling for 'Order Now' */
+#btn {
+    padding: 8px 20px;
+    background: #b2744c;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #ffedd5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    text-decoration: none;
+}
+
+#btn:hover {
+    background: #de9e73;
+    color: #fff;
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+#btn:active {
+    transform: scale(1.02); /* Pressed effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow on click */
+}
+
+
+
+
+/* --- Sign-Up and Sign-In Page Styles --- */
+.signup-container, .signin-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 10px auto;
+    position: relative;
+    z-index: 2;
+}
+
+body.signin-page, body.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+/* Sign-Up and Sign-In Form Styles */
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6b4f4f;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+small {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #713107;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b2744c;
+}
+
+/* Sign-In and Sign-Up Links */
+.options {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.options a {
+    color: #713107;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.options span {
+    color: #713107;
+    font-size: 14px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: rgba(113, 49, 7, 0.8);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .home-link {
+    color: white;
+    text-decoration: none;
+}
+
+footer .home-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgba(113, 49, 7, 0.9);
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar.active nav ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;    
+    }
+}
+
+/* --- Menu Section Styling --- */
+.section-heading-container {
+    text-align: center; /* Center the heading */
+    margin: -10px 0; /* Space around the heading */
+}
+
+.section-heading {
+    font-size: 36px; /* Size of the heading */
+    margin-top :20px;
+        margin-bottom: 20px;
+
+    color: #6b4f4f; /* Color for the heading */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Spacing between letters */
+    font-weight: bold; /* Bold text */
+}
+
+#product-gallery {
+  padding: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.product-grid {
+  display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; 
+}
+
+.product-block {
+    background-color: white; /* Background for each product block */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Padding inside product block */
+    text-align: center; /* Center content */
+}
+
+.product-block:hover {
+ transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+     width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image {
+    max-width: 100%; /* Ensure image fills the container */
+    border-radius : 8px;
+}
+
+.product-block:hover .product-image {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.product-info {
+  margin-top : 10px;
+}
+
+.product-info h6 {
+    margin-bottom: 10px; /* Spacing below product name */
+}
+
+.price {
+    font-size: 1.2em; /* Larger font size for price */
+    color: #b2744c; /* Color for price */
+}
+.name {
+    font-size: 20px; /* Increase font size */
+    color: #4b2e1e; /* Dark coffee color */
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    margin-top: 10px;
+}
+
+/* Button Group */
+.button-group {
+      display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: white;
+    background-color: #b2744c;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #de9e73;
+    border-color: #de9e73;
+    transform: scale(1.05); /* Slightly scales the button on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute; /* Absolute positioning */
+        top: 80px; /* Below navbar */
+        right: 0; /* Align to the right */
+        background-color: rgba(113, 49, 7, 0.9); /* Menu background */
+        width: 100%; /* Full-width dropdown */
+        padding: 10px 0; /* Padding for dropdown */
+    }
+
+    .navbar.active nav ul {
+        display: flex; /* Show menu when active */
+    }
+}
